@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Level Data</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='level_data.css') }}">
+    <link rel="shortcut icon" type="image/ico" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+
+<body>
+    <center>
+        <h1 id="main_h1">Pixelsuft HW Picture</h1>
+    </center>
+    <input type="button" class="btn" value="Go Home!" id="go_home">
+    <input type="button" class="btn" value="Hide Other!" id="hide_other">
+    <h2 id="result_title" class="sh">Result: </h2>
+    <div id="result">
+        {{ result }}
+    </div>
+    <script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='level_data.js') }}">
+    </script>
+</body>
+
+</html>

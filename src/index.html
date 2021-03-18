@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pixelsuft HW Picture</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="shortcut icon" type="image/ico" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+
+<body>
+    <center>
+        <h1 id="main_h1">Pixelsuft HW Picture</h1>
+    </center>
+    <form action="/get_level_data" method="POST" enctype="multipart/form-data">
+        <label>
+            <input type="file" name="sam_file" style="display: none;">
+            <div class="btn">Select image!</div>
+        </label>
+        <h2 id="sh">Shape Size:</h2>
+        <input type="text" class="input" name="shape_size" value="5x5">
+        <h2 id="sh">Chromakey:</h2>
+        <input type="text" class="input" name="chromakey" value="rgb (0, 0, 0)">
+        <h2 id="sh">DownGrade:</h2>
+        <input type="text" class="input" name="downgrade" value="3x3">
+        <br>
+        <input type="submit" value="Generate Data!" class="btn">
+    </form>
+    <script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='index.js') }}">
+    </script>
+</body>
+
+</html>
