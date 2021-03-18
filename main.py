@@ -34,7 +34,7 @@ def get_level_data():
     except:
         return render_result('Error shape size')
 
-    downgrade = req.form.get('shape_size').strip().replace(' ', '').split('x')
+    downgrade = req.form.get('downgrade').strip().replace(' ', '').split('x')
     downgrade_x, downgrade_y = 0, 0
     try:
         downgrade_x, downgrade_y = int(downgrade[0]), int(downgrade[1])
